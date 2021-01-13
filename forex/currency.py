@@ -12,6 +12,6 @@ c = CurrencyRates()
 start_date = date(2021, 1, 1)
 end_date = date(2021, 1, 13)
 for single_date in daterange(start_date, end_date):
-    date_obj = datetime.datetime(single_date.year, single_date.month, single_date.day, 18, 36, 28, 151012)
+    date_obj = datetime.datetime(single_date.year, single_date.month, single_date.day, 18, 36, 28)
     # print(single_date.strftime("%Y-%m-%d"))
-    print(c.get_rate('USD', 'TRY', date_obj))
+    print(date_obj.timestamp(), c.get_rate('USD', 'TRY', date_obj))
